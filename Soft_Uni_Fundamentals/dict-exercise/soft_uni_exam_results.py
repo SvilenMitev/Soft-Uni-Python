@@ -21,6 +21,7 @@ while True:
         exam_results_dict[student_name].append(student_score)
 
 print(exam_results_dict)
+# test
 
 
 

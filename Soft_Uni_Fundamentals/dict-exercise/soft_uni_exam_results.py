@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 exam_results_dict = {}
 
 while True:
@@ -16,12 +19,37 @@ while True:
         exam_results_dict[student_name].append(student_score)
     if student_name in exam_results_dict and exam_results_dict[student_name][0] == language and exam_results_dict[student_name][1] < student_score:
         exam_results_dict[student_name][1] = student_score
+        exam_results_dict[student_name].append(language)
     elif student_name in exam_results_dict and exam_results_dict[student_name][0] != language:
         exam_results_dict[student_name].append(language)
         exam_results_dict[student_name].append(student_score)
+    elif student_name in exam_results_dict and exam_results_dict[student_name][0] == language and exam_results_dict[student_name][1] > student_score:
+        exam_results_dict[student_name].append(language)
 
-print(exam_results_dict)
-# test
+print("Results:")
+for names, points in exam_results_dict.items():
+    if "banned" in points:
+        continue
+    for i in points:
+        if  isinstance(i, int):
+            print(f"{names} | {i}")
+
+
+print("Submissions:")
+templist = []
+for values in exam_results_dict.values():
+    for i in values:
+        if  i != "banned" and isinstance(i, str):
+            templist.append(i)
+
+
+counted_items = Counter(templist)
+
+# Print the counts
+for item, count in counted_items.items():
+    print(f"{item} - {count}")
+
+
 
 
 

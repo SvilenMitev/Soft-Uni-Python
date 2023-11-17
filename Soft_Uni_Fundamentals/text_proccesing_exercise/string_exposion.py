@@ -1,10 +1,3 @@
-# from itertools import islice
-
-# initial_string = input()
-# final_string = ''
-# for i in initial_string:
-#     if final_string[-1] == '<' :
-
 
 
 some_string = input()

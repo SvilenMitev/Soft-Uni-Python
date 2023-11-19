@@ -1,23 +1,23 @@
-import re
-import time
+# import re
+# import time
 
 
-duration_seconds = 5
-start_time = time.time()
-end_time = start_time + duration_seconds
+# duration_seconds = 5
+# start_time = time.time()
+# end_time = start_time + duration_seconds
 
-match = []
-while True:
-    current_input = input()
-    regex = r'\d+'
+# match = []
+# while True:
+#     current_input = input()
+#     regex = r'\d+'
 
 
 
-    for i in current_input:
-        match += re.findall(regex, i)
-    if time.time() < end_time:
-        break
-print("".join(match))
+#     for i in current_input:
+#         match += re.findall(regex, i)
+#     if time.time() < end_time:
+#         break
+# print("".join(match))
 
 
 import re

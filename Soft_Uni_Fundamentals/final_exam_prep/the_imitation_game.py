@@ -19,13 +19,13 @@ while True:
     elif command == 'ChangeAll':
         substring = splited_command[1]
         replacment = splited_command[2]
-        initial_input.replace(substring, replacment)
-        # result = ''
-        # for i in initial_input:
-        #     if i == substring:
-        #         result += replacment
-        #     else:
-        #         result += i
-        # initial_input = result
+        # initial_input.replace(substring, replacment)
+        result = ''
+        for i in initial_input:
+            if i == substring:
+                result += replacment
+            else:
+                result += i
+        initial_input = result
 
-print(initial_input)
+print(f"The decrypted message is: {initial_input}")

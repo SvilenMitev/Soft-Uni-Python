@@ -20,12 +20,15 @@ while True:
     elif command[0] == "Switch":
         old_string = command[1]
         new_string = command[2]
-        while True:
-            if old_string in first_string:
-                first_string = first_string.replace(old_string, new_string)
-            else:
-                break
+        if old_string in first_string:
+            first_string = first_string.replace(old_string, new_string)
         print(first_string)
+        # while True:
+        #     if old_string in first_string:
+        #         first_string = first_string.replace(old_string, new_string)
+        #     else:
+        #         break
+
 
 
 print(f"Ready for world tour! Planned stops: {first_string}")

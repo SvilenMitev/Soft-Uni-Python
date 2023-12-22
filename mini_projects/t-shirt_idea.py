@@ -1,7 +1,5 @@
-memories = []
-life = 30
-for me in range(life):
-
-    experiance = input("What's Next: ")
-    memories.append(experiance)
-    print(f"Remember that time when we {memories[me]}")
+input1 = 'Da"Quawn Pipkin'
+incorrect_symbol = '"'
+correct_symbol = ' '
+input1 = input1.replace(incorrect_symbol, correct_symbol)
+print(input1)

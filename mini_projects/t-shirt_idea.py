@@ -1,4 +1,3 @@
-import pandas
 
 input1 = 'Da"Quawn Pipkin'
 incorrect_symbol = '"'

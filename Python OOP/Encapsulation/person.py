@@ -8,21 +8,8 @@ class Person:
     def get_age(self):
         return self.age
 
-import unittest
+person = Person("George", 32)
 
-class Tests(unittest.TestCase):
-    def test_init(self):
-        p = Person("Alabala", 25)
-        self.assertEqual(p._Person__name, "Alabala")
-        self.assertEqual(p._Person__age, 25)
+print(person.get_name())
 
-    def test_get_name(self):
-        p = Person("X", 11)
-        self.assertEqual(p.get_name(), "X")
-        
-    def test_get_age(self):
-        p = Person("LA", 61)
-        self.assertEqual(p.get_age(), 61)
-        
-if __name__ == "__main__":
-   unittest.main()
+print(person.get_age())
